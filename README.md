@@ -37,8 +37,9 @@ Welcome to my GitHub profile. I am a **computer science professional** passionat
 | **AI & ML**         | TensorFlow, PyTorch, fine-tuning, NLP            |
 | **Systems**         | Debian Linux, virtualization (libvirt, QEMU/KVM) |
 
-![Language Breakdown](language_breakdown.png)
-
+| Pie Chart | Lines of Code |
+|:---------:|:-------------:|
+| ![Pie Chart](language_breakdown.png) | ![Lines of Code](language_bar.png) |
 ---
 
 ## 🚀 Notable Projects

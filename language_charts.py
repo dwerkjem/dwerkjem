@@ -1,10 +1,10 @@
+#!/usr/bin/env python3
 import os
 import requests
 from collections import Counter
 import matplotlib.pyplot as plt
 
 def get_repos(user, token=None):
-    """Retrieve all public repos for the given user (paginated)."""
     url = f"https://api.github.com/users/{user}/repos"
     headers = {}
     if token:
@@ -22,7 +22,6 @@ def get_repos(user, token=None):
     return repos
 
 def get_language_stats(repos, token=None):
-    """Fetch the languages for each repo and sum the bytes per language."""
     headers = {}
     if token:
         headers["Authorization"] = f"token {token}"
@@ -30,51 +29,55 @@ def get_language_stats(repos, token=None):
     for repo in repos:
         resp = requests.get(repo["languages_url"], headers=headers)
         resp.raise_for_status()
-        langs = resp.json()
-        for lang, count in langs.items():
+        for lang, count in resp.json().items():
             lang_counter[lang] += count
     return lang_counter
 
 def plot_pie(stats, user):
-    """Generate and save a transparent pie chart with white text."""
-    labels = list(stats.keys())
-    sizes  = list(stats.values())
-
-    if not labels:
-        print("No language data to plot.")
-        return
-
-    # Create transparent figure
-    plt.figure(figsize=(8, 8), facecolor='none')
-    wedges, texts, autotexts = plt.pie(
-        sizes,
-        labels=labels,
+    plt.figure(figsize=(6,6), facecolor='none')
+    plt.pie(
+        stats.values(),
+        labels=stats.keys(),
         autopct="%1.1f%%",
         startangle=140,
         textprops={'color': 'white'}
     )
-
-    # Set title with white text
     plt.title(f"Language Breakdown for {user}", color='white')
-
-    # Ensure the plot area is transparent
     ax = plt.gca()
     ax.patch.set_alpha(0)
-
-    plt.axis("equal")  # Equal aspect ratio ensures the pie is circular.
+    plt.axis("equal")
     plt.tight_layout()
     plt.savefig("language_breakdown.png", dpi=300, transparent=True)
-    print("→ Saved pie chart as language_breakdown.png (transparent background, white text)")
+    plt.close()
+
+def plot_bar(stats, user):
+    languages = list(stats.keys())
+    sizes     = list(stats.values())
+
+    plt.figure(figsize=(8,5), facecolor='none')
+    bars = plt.bar(languages, sizes)
+    plt.xticks(rotation=45, ha='right')
+    plt.ylabel("Bytes of Code", color='white')
+    plt.title(f"Lines (Bytes) of Code per Language for {user}", color='white')
+    ax = plt.gca()
+    ax.patch.set_alpha(0)
+    # White text for axes
+    ax.xaxis.label.set_color('white')
+    ax.yaxis.label.set_color('white')
+    ax.tick_params(axis='x', colors='white')
+    ax.tick_params(axis='y', colors='white')
+    plt.tight_layout()
+    plt.savefig("language_bar.png", dpi=300, transparent=True)
+    plt.close()
 
 def main():
     user  = "dwerkjem"
-    token = os.getenv("GITHUB_TOKEN")  # optional: set for higher rate limits
-    print(f"Fetching repos for '{user}'…")
+    token = os.getenv("GITHUB_TOKEN")
     repos = get_repos(user, token)
-    print(f"Found {len(repos)} repos. Aggregating languages…")
     stats = get_language_stats(repos, token)
     plot_pie(stats, user)
+    plot_bar(stats, user)
+    print("→ Saved language_breakdown.png and language_bar.png")
 
 if __name__ == "__main__":
     main()
-
