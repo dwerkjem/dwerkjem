@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import os
 import requests
 from collections import Counter
@@ -102,7 +101,7 @@ def main():
 
     plot_pie(stats, user)
     plot_bar(stats, user)
-    print("→ Saved language_breakdown.png and language_bar.png")
+    print("Saved language_breakdown.png and language_bar.png")
 
 if __name__ == "__main__":
     main()
