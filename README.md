@@ -30,7 +30,6 @@ A web application for customizable Hebrew transliteration with optional niqqud (
 ## 🤝 Connect with Me
 
 * 📧 [derekrneilson@gmail.com](mailto:derekrneilson@gmail.com)
-* 🔗 [LinkedIn](https://www.linkedin.com/in/derek-neilson-9369b11aa/)
 
 ---
 
@@ -66,7 +65,6 @@ A web application for customizable Hebrew transliteration with optional niqqud (
 
 ## ⚡ Fun Facts
 
-* 🐕 Proud owner of two energetic dogs—always inspired by their curiosity.
 * 🎯 Advocate of minimalist design: less clutter, greater focus.
 * 📚 Family-oriented: balancing rigorous work with quality time.
 
