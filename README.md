@@ -52,8 +52,10 @@ I am a computer science professional focused on building reliable, maintainable 
 ## 📊 GitHub Statistics
 
 <div align="center">
-  <img src="language_breakdown.png" alt="Language Breakdown" width="360" />
-  <img src="language_bar.png" alt="Lines of Code per Language" width="360" />
+  <img src="language_breakdown.png" alt="Language Breakdown" />
+</div>
+<div align="center">
+  <img src="language_bar.png" alt="Lines of Code per Language"  />
 </div>
 
 <sub>Note: The plots above are generated from local analysis scripts and reflect personal repositories.</sub>
