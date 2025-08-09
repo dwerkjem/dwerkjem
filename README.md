@@ -30,11 +30,13 @@ I am a computer science professional focused on building reliable, maintainable 
 
 ```mermaid
 %% Software Development Lifecycle Iterative
-%% Switched to LR to use more horizontal space; each subgraph keeps vertical stacking (direction TB)
-flowchart LR
+%% Layout tuned for balanced horizontal + vertical usage: phases stack top->bottom, steps flow left->right inside each phase.
+%% Spacing tightened for density; adjust nodeSpacing/rankSpacing as needed.
+%%{init: {'flowchart': {'nodeSpacing': 28, 'rankSpacing': 40, 'diagramPadding': 8, 'useMaxWidth': true}}}%%
+flowchart TB
   %% 1) Discovery & Planning
   subgraph DISCOVERY[Discovery and Planning]
-    direction TB
+    direction LR
     DP1[Problem or Opportunity]
     DP2[Stakeholder Interviews]
     DP3[Requirements Functional and Non Functional]
@@ -46,7 +48,7 @@ flowchart LR
 
   %% 2) Design & Architecture
   subgraph DESIGN[Design and Architecture]
-    direction TB
+    direction LR
     DA1[High Level Architecture]
     DA2[Architecture Decision Records]
     DA3[Data Model and Schema]
@@ -66,7 +68,7 @@ flowchart LR
 
   %% 3) Implementation (Iterative)
   subgraph IMPLEMENT[Implementation Iterative]
-    direction TB
+    direction LR
     IMPL1[Backlog Refinement]
     IMPL2[Sprint Planning]
   IMPL3[[Branch feature]]
@@ -85,7 +87,7 @@ flowchart LR
 
   %% 4) Continuous Integration
   subgraph CI[Continuous Integration]
-    direction TB
+    direction LR
   CI1[Build and Compile]
   CI2[Static Analysis and Lint]
     CI3[Unit Tests]
@@ -104,7 +106,7 @@ flowchart LR
 
   %% 5) Release & Deployment
   subgraph RELEASE[Release and Deployment]
-    direction TB
+    direction LR
     REL1[Create Release Candidate]
   REL2[DB Migration and Rollback Plan]
   REL3[Deploy to Staging]
@@ -127,7 +129,7 @@ flowchart LR
 
   %% 6) Operations & Feedback
   subgraph OPS[Operations and Feedback]
-    direction TB
+    direction LR
   OP1[Observability Metrics Logs Traces]
   OP2[SLO and SLA Monitoring]
     OP3{Incident?}
@@ -146,8 +148,6 @@ flowchart LR
 ```
 
 </details>
-
-<sub>Current selections are marked “— Chosen.” Adjust as the project evolves.</sub>
 
 ---
 
