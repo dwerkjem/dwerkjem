@@ -16,3 +16,8 @@ python3 -m pip install -q -r requirements.txt >/dev/null 2>&1 || true
 
 python3 language_charts.py
 
+# Render Mermaid diagram (if Node + npx available)
+if [ -x diagram/render_diagram.sh ]; then
+	bash diagram/render_diagram.sh || true
+fi
+

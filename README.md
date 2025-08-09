@@ -4,19 +4,6 @@
 
 ---
 
-## 🔭 Current Focus
-
-### Hebrew Transliteration Helper
-
-A web application for customizable Hebrew transliteration with optional niqqud (vowel marks).
-
-* **Purpose:** Fast, configurable transliteration for study, research, and educational tooling.
-* **Key capabilities:** Toggle niqqud, customize mappings, preview results before export.
-* **Status:** Active development; seeking feedback and collaborators.
-* **Repository:** [github.com/derekneilson/hebrew-transliteration-helper](https://github.com/derekneilson/hebrew-transliteration-helper)
-
----
-
 ## 🌱 Learning & Growth
 
 * Advanced **Rust** GUI development (GTK ecosystem and tooling).
@@ -39,29 +26,28 @@ I am a computer science professional focused on building reliable, maintainable 
 
 ---
 
-## 🧪 Selected Projects
 
-### Hebrew Transliteration Helper
+<!-- Pre-rendered Mermaid diagram (auto-generated) -->
+<p align="center">
+  <img src="diagram/sdlc.svg" alt="Software Development Lifecycle Diagram" width="800" />
+</p>
 
-Configurable transliteration engine with optional niqqud, designed for clarity and repeatability in study and teaching contexts.
+<details>
+  <summary><strong>Show Mermaid source</strong></summary>
 
-* **Highlights:** Rule‑based transliteration, interactive preview, accessibility‑oriented UI.
-* **Tech:** TypeScript, React, Node.js tooling.
-* **Link:** [Repository](https://github.com/derekneilson/hebrew-transliteration-helper)
+```mermaid
+%% Source of diagram. Auto-rendered to diagram/sdlc.svg by diagram/render_diagram.sh
+%% (Edit diagram/sdlc.mmd instead of this embedded copy.)
+flowchart TD
+  classDef hidden fill=none,stroke=none
+  HIDDEN_START([Start]):::hidden
+  HIDDEN_START --> DISCOVERY
+  %% (Truncated – see diagram/sdlc.mmd for full source)
+```
 
-### Antelope Writing (Club Platform)
+</details>
 
-A web platform for writing clubs that supports messaging, submissions, points, and administration features.
-
-* **Highlights:** Real‑time messaging, submissions workflow, points/awards, admin dashboard.
-* **Tech:** Next.js, PostgreSQL, NATS, Traefik, Docker; CI with GitHub Actions.
-
-### Hebrew Transliteration CLI (Companion)
-
-Command‑line utility oriented toward batch transliteration and scripted workflows.
-
-* **Highlights:** Non‑interactive usage, reproducible outputs, simple integration with shell pipelines.
-* **Tech:** Python and shell tooling; designed for Debian‑based environments.
+<sub>Current selections are marked “— Chosen.” Adjust as the project evolves.</sub>
 
 ---
 
@@ -112,3 +98,11 @@ Command‑line utility oriented toward batch transliteration and scripted workfl
 * 📚 Family‑oriented; I balance rigorous work with meaningful time off.
 
 > *“Simplicity is the ultimate sophistication.”* — Leonardo da Vinci
+
+---
+
+## 📌 Notes & Options (Remove before publishing)
+
+* Add links for LinkedIn, personal site, or a publication list, if available.
+* If preferred, include badges (e.g., build status, code style, license) for selected projects.
+* A condensed résumé variant can be produced from this profile for LinkedIn or a personal website.
